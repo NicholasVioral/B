@@ -1,0 +1,274 @@
+/* General Page Layout */
+.blog-container {
+  padding: 100px 20px 50px;
+  background: #f8f8ff;
+  color: #222;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+.back-button:hover {
+  color: #6b46c1;
+}
+
+.blog-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2d2d2d;
+}
+
+.blog-hero p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Controls Section (Search + Sort + New Post) */
+.blog-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 30px auto 50px;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-bar input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #333;
+  padding-left: 6px;
+  font-size: 1rem;
+  width: 180px;
+}
+
+.sort-btn,
+.new-post-btn,
+.delete-btn {
+  background: #6c63ff;
+  border: none;
+  color: white;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sort-btn:hover,
+.new-post-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #e74c3c;
+}
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Post Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 0 10px;
+}
+
+/* Post Card */
+.blog-post-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.blog-post-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #2c2c2c;
+}
+
+.post-category {
+  background: #ede9fe;
+  color: #6b46c1;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.post-excerpt {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.read-more-btn {
+  background: #6b46c1;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #553c9a;
+}
+
+/* New Post Form */
+.new-post-form {
+  background: white;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.new-post-form input,
+.new-post-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.new-post-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.new-post-form button {
+  background: #7b61ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.new-post-form button:hover {
+  background: #654de1;
+}
+
+/* Empty State */
+.empty-blog {
+  text-align: center;
+  color: #666;
+  margin-top: 60px;
+}
+
+.empty-blog h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.sort-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.sort-btn {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.sort-btn:hover {
+  background: #e0e0e0;
+}
+
+.sort-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.blog-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 200px;
+}
